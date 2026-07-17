@@ -7,13 +7,20 @@ console.log("Student Results:");
 
 for (let i = 0; i < marks.length; i++) {
     if (marks[i] >= 50) {
-        console.log(marks[i] + " - Pass");
+        console.log("Student " + (i + 1) + ": " + marks[i] + " - Pass");
         passCount++;
     } else {
-        console.log(marks[i] + " - Fail");
+        console.log("Student " + (i + 1) + ": " + marks[i] + " - Fail");
         failCount++;
     }
 }
 
-console.log("\nTotal Passed:", passCount);
-console.log("Total Failed:", failCount);
+// Top and Lowest Score
+let topScore = Math.max(...marks);
+let lowestScore = Math.min(...marks);
+
+console.log("\nTotal Pass:", passCount);
+console.log("Total Fail:", failCount);
+
+console.log("Top Score:", topScore);
+console.log("Lowest Score:", lowestScore);
